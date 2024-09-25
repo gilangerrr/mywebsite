@@ -1,0 +1,73 @@
+body{
+    background: linear-gradient(135deg, #f6ffa8 , #afff96); /* Contoh gradien */
+}
+
+/* Gambar Responsif */
+.img-custom {
+    max-width: 200px; 
+    height: auto;
+    margin: 10px 5px; /* Jarak gambar */
+    border-radius: 10px; /* Sudut melingkar */
+    cursor: pointer; /* Menunjukkan bahwa gambar bisa diklik */
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+.modal-body img {
+    max-width: 80%; /* Atur lebar maksimum gambar di modal menjadi 80% dari kontainer */
+    height: auto; /* Tinggi otomatis untuk menjaga rasio aspek */
+    margin: 0 auto; /* Pusatkan gambar */
+    display: block; /* Pastikan gambar ditampilkan sebagai blok untuk pusat */
+}
+
+
+.img-custom:hover {
+    transform: scale(1.1); /* Zoom saat hover */
+}
+
+.img-custom.active {
+    transform: scale(1.1); /* Efek zoom saat ketuk */
+}
+
+.text-1 {
+    margin-bottom: 15px;
+    margin-top: 3px;
+}
+
+.modal-backdrop {
+    display: none; /* Menghilangkan backdrop */
+}
+
+.carousel-inner img {
+    width: 100%; /* Memastikan gambar mengisi lebar modal */
+    height: auto; /* Mempertahankan rasio aspek */
+    border-radius: 8px; /* Memberi sudut melengkung untuk tampilan yang lebih halus */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Mengatur warna latar belakang menjadi hitam */
+    border-radius: 40%; /* Membuat ikon berbentuk bulat (opsional) */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(1); /* Mengubah warna ikon menjadi putih di atas latar belakang hitam */
+}
+
+
+@media (max-width:768px) {
+    .text-1{
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .d-flex {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom untuk mobile */
+        gap: 10px; /* Jarak antar elemen */
+    }
+
+    .img-custom {
+        max-width: 97%; /* Gambar mengisi lebar kontainer */
+        margin-bottom: 8px; /* Jarak antar gambar */
+    }
+    
+}

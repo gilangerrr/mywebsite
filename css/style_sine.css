@@ -1,0 +1,128 @@
+body {
+    background: linear-gradient(135deg, #adb6e9 , #9bfffa); /* Contoh gradien */
+    min-height: 100vh; /* Pastikan tinggi minimal 100% viewport */
+    display: flex; /* Agar elemen di dalam body bisa dipusatkan */
+    flex-direction: column; /* Menjaga struktur konten */
+}
+
+/* Gambar Responsif */
+.img-custom {
+    max-width: 200px; 
+    height: auto;
+    margin: 10px 5px; /* Jarak gambar */
+    border-radius: 10px; /* Sudut melingkar */
+    cursor: pointer; /* Menunjukkan bahwa gambar bisa diklik */
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+.modal-body img {
+    max-width: 80%; /* Atur lebar maksimum gambar di modal menjadi 80% dari kontainer */
+    height: auto; /* Tinggi otomatis untuk menjaga rasio aspek */
+    margin: 0 auto; /* Pusatkan gambar */
+    display: block; /* Pastikan gambar ditampilkan sebagai blok untuk pusat */
+}
+
+
+.img-custom:hover {
+    transform: scale(1.1); /* Zoom saat hover */
+}
+
+.img-custom.active {
+    transform: scale(1.1); /* Efek zoom saat ketuk */
+}
+
+.modal-backdrop {
+    display: none; /* Menghilangkan backdrop */
+}
+
+.carousel-inner img {
+    width: 100%; /* Memastikan gambar mengisi lebar modal */
+    height: auto; /* Mempertahankan rasio aspek */
+    border-radius: 8px; /* Memberi sudut melengkung untuk tampilan yang lebih halus */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Mengatur warna latar belakang menjadi hitam */
+    border-radius: 50%; /* Membuat ikon berbentuk bulat (opsional) */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(1); /* Mengubah warna ikon menjadi putih di atas latar belakang hitam */
+}
+
+/* Kontainer untuk Teks */
+.smooth-appear {
+    display: flex; /* Menggunakan flexbox untuk pusat */
+    justify-content: center; /* Pusatkan secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal */
+    height: 60px; /* Tinggi kontainer */
+    margin: 20px auto; /* Jarak atas dan bawah */
+    padding: 10px; /* Ruang dalam kontainer */
+}
+
+/* Teks yang akan muncul */
+.text {
+    opacity: 0; /* Mulai dengan opasitas 0 */
+    transform: translateY(10px); /* Mulai dari posisi bawah */
+    animation: appear 1s forwards; /* Animasi muncul */
+    text-align: center;
+    font-size: 1.8rem; /* Ukuran font */
+    color: #000000; /* Warna teks */
+    font-weight: bold; /* Tebal font */
+    text-shadow: 1px 1px 3px rgb(255, 255, 255); /* Bayangan teks */
+    margin-bottom: 20px; /* Jarak antara teks dan gambar */
+}
+
+/* Keyframes untuk animasi */
+@keyframes appear {
+    0% {
+        opacity: 0; /* Tidak terlihat */
+        transform: translateY(10px); /* Mulai dari bawah */
+    }
+    100% {
+        opacity: 1; /* Menjadi terlihat */
+        transform: translateY(0); /* Kembali ke posisi normal */
+    }
+}
+
+.btn {
+    padding: 0.5rem 1rem; /* Sesuaikan padding jika perlu */
+    max-width: 7rem; /* Pastikan ukuran tombol sesuai dengan konten */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries untuk tampilan mobile */
+@media (max-width: 768px) {
+    .smooth-appear {
+        height: 65px; /* Tinggi lebih kecil untuk mobile */
+    }
+
+    .text {
+        font-size: 1.3rem; /* Ukuran font lebih kecil */
+    }
+
+    .d-flex {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom untuk mobile */
+        gap: 10px; /* Jarak antar elemen */
+    }
+
+    .img-custom {
+        max-width: 97%; /* Gambar mengisi lebar kontainer */
+        margin-bottom: 8px; /* Jarak antar gambar */
+    }
+}
+
+@media (max-width: 576px) {
+    .btn {
+        padding: 0.5rem 1rem; /* Sesuaikan padding jika perlu */
+        max-width: 7rem; /* Pastikan ukuran tombol sesuai dengan konten */
+        padding: 0.25rem 0.5rem; /* Padding lebih kecil */
+    }
+}
+

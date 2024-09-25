@@ -1,0 +1,40 @@
+body {
+    font-family: 'Lora', serif;
+    background: linear-gradient(135deg, #d1fccd, #7faadb); 
+}
+
+h2 {
+    font-weight: 700; /* Membuat judul lebih tebal */
+    color: #000000; /* Warna gelap untuk kontras yang baik */
+}
+
+p {
+    font-weight: 500; /* Berat font untuk paragraf */
+    color: #000000; /* Warna paragraf */
+}
+
+#profile {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.349); /* Tambahkan latar belakang putih untuk profil */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
